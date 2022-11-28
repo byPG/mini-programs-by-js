@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compound Interest</title>
+
+    <style>
+        #calc {
+            display: grid;
+            grid-template-columns: auto auto;
+            gap: 10px;
+            max-width: 450px;
+            text-align: right;
+        }
+
+        .result {
+            font-weight: bold;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div id="calc">
+        <label for="">Kapitał: </label>
+        <input type="text" id="capital" value="1000">
+
+        <label for="">Oprocentowanie: </label>
+        <input type="text" id="rate" value="0.04">
+
+        <label for="">Kapitalizacja co ile miesięcy: </label>
+        <input type="text" id="n" value="12">
+
+        <label for="">Na ile lat lokata:</label>
+        <input type="text" id="num-years" value="5">
+
+        <span></span> <button class="calculate">Oblicz</button>
+
+        <label for="" class="result">Wartość końcowa: </label>
+        <input type="text" id="result-value" value="5">
+
+
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
