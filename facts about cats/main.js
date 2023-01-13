@@ -1,5 +1,11 @@
 window.onload = function () { //po załadowaniu strony zrób to co w środku
     getContent();
+
+    document.addEventListener('keyup', function(event){
+        if(event.code == "Space"){
+            getContent();
+        }
+    });
 }
 
 async function getContent(){
