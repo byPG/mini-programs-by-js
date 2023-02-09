@@ -15,7 +15,7 @@ class Clock{
         this.minute.style.transform = `rotateZ(${m}deg)`;
         this.second.style.transform = `rotateZ(${s}deg)`;
 
-        console.log(h, m, s)
+        // console.log(h, m, s)
     }
 
     start(){
