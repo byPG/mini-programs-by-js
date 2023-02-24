@@ -18,6 +18,8 @@ class PasswordGenerator {
 
         this.generateButton.addEventListener("click", this.generatePassword);
 
+        this.clipboardButton.addEventListener("click", this.copyToClipboard);
+
         this.updateOptions();
     }
 
@@ -58,8 +60,25 @@ class PasswordGenerator {
         if(!this.length.value) return;
         if(this.optionMethods.length === 0) return;
 
+        const arrIndexes = Array.from(Array(+this.length.value).keys()); //plus konwertuje teskt na liczbę
 
+        const password = arrIndexes.map( i => {
+            const method = this.getRandomGenMethod();
+            return method();
+        }).join("");
 
+        this.resultPassword.innerHTML = password;
+    }
+
+    getRandomGenMethod = () => {
+        const methods = this.optionMethods;
+        return methods[Math.floor(Math.random()* methods.length)];
+    }
+
+    copyToClipboard = () => {
+        const v = this.resultPassword.innerHTML;
+        const cb = navigator.clipboard;
+        cb.writeText(v).then(() => { console.log(`hasło zostało skopiowane do schowka`)}); //promise
     }
 
 }
