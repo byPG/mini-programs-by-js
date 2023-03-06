@@ -17,7 +17,7 @@ class FormValidator {
             minlength: 5, maxlength: 30, matchWithPasswordId: "#password"
         });
 
-        console.log(this.formFields)
+        // console.log(this.formFields)
 
         this.init();
     }
@@ -39,9 +39,9 @@ class FormValidator {
         const formResults = this.formFields.map(f => f.validate());
 
         if(formResults.includes(false)){
-            console.log("Błąd w formularzu");
+            // console.log("Błąd w formularzu");
         } else{
-            console.log("Formularz jest ok")
+            // console.log("Formularz jest ok")
         }
     }
 }
