@@ -25,16 +25,13 @@ class FormValidator {
     addFormField = (cssSelector, options) => {
         const formField = new FormField(cssSelector, options);
         this.formFields.push(formField);
-
-
     }
 
     init() {
         this.form.addEventListener("submit", (e) => {
             e.preventDefault();
 
-            TouchList.validateForm();
-
+            this.validateForm();
         });
     }
 

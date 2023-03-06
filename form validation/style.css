@@ -74,6 +74,7 @@ h2{
 
 .field-control input.error {
     border-color: var(--color-error);
+   
 }
 
 .field-control span {
@@ -88,6 +89,7 @@ h2{
 
 .field-control span.error{
     color: var(--color-error);
+    visibility: visible;
 }
 
 .registration-form .register-button{
