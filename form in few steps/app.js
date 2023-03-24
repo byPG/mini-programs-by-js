@@ -56,8 +56,6 @@ class MultiStepForm {
         return inputsCorrect;
     }
 
-
-
     resetSteps = () => {
         this.changeStep(0);
     }
