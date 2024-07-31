@@ -1,3 +1,3 @@
 # mini-programs-by-js
 
-Programs create with course.
+Programs created with course.
